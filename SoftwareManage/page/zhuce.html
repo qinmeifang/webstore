@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <link rel="stylesheet" href="../css/head.css" type="text/css">
+    <link rel="stylesheet" href="../css/content.css" type="text/css">
+    <link rel="stylesheet" href="../css/foot.css" type="text/css">
+    <script type="text/javascript" src="../js/zhuce.js"></script>
+</head>
+<body>
+<span class="quick">
+   <a href="index.html">
+       退出登录
+   </a>
+
+    </span>
+<header id="header">
+    <h1>软件工程实践综合教学平台</h1>
+    <nav >
+        <ul>
+            <li><a href="student.html">实验安排</a></li>
+            <li><a >实验注册</a></li>
+            <li><a href="select.html">成绩查询</a></li>
+            <li><a href="submit.html">作业提交</a></li>
+            <li><a href="test.html">在线测试</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="content">
+    <div id="groupLogin">
+        <form id="zhuce" action="" method="post">
+            <h4 class="zhuce">实验小组注册</h4>
+            <ul class="zhuceList">
+                <li class="zhuceList-li">小组名称：</li>
+                <li>
+                    <input id="groupName" class="zhuceList-li-input" type="text" value="">
+                </li>
+            </ul>
+            <ul class="zhuceList">
+                <li class="zhuceList-li">组&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长：</li>
+                <li>
+                    <input id="leader" name="leader"  class="zhuceList-li-input" type="text" value="">
+                </li>
+            </ul>
+            <ul class="zhuceList">
+                <li class="zhuceList-li">组长学号：</li>
+                <li>
+                    <input id="leaderId" name="leaderId"  class="zhuceList-li-input" type="text" value="">
+                </li>
+            </ul>
+            <ul class="zhuceList">
+                <li class="zhuceList-li">实验题目：</li>
+                <li >
+                    <input id="testName" name="testName" class="zhuceList-li-input" type="text" value="">
+                </li>
+            </ul>
+            <ul class="zhuceList">
+                <li class="zhuceList-li">开始时间：</li>
+                <li >
+                    <input id="timeS" name="timeS" class="zhuceList-li-input" type="text" value="">
+                </li>
+            </ul>
+            <ul class="zhuceList">
+                <li class="zhuceList-li">项目描述：</li>
+                <li >
+                    <input id="introduce" name="introduce" class="zhuceList-li-input" type="text" value="">
+                </li>
+            </ul>
+            <ul class="zhuceList">
+                <table  class="zhuceList-memberName">
+                    <caption>小组成员</caption>
+                    <tr>
+                        <th scope="col">姓名</th>
+                        <th scope="col">学号</th>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                           <input id="memberName0"   name="memberName" value="">
+                        </td>
+                        <td>
+                            <input id="member0"  value="">
+                        </td>
+
+                    </tr>
+                    <tr class="altrow">
+                        <td scope="row">
+                            <input id="memberName1" name="memberNameId"  value="">
+                        </td>
+                        <td>
+                            <input id="member1"   value="">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <input id="memberName2" name="memberName"  value="">
+                        </td>
+                        <td>
+                            <input id="member2"  value="">
+                        </td>
+
+                    </tr>
+                    <tr class="altrow">
+                        <td scope="row">
+                            <input id="memberName3" name="memberName"  value="">
+                        </td>
+                        <td>
+                            <input id="member3"   value="">
+                        </td>
+                    </tr>
+                    <tr class="altrow">
+                        <td scope="row">
+                            <input id="memberName4" name="memberName"  value="">
+                        </td>
+                        <td>
+                            <input id="member4"   value="">
+                        </td>
+                    </tr>
+                    </table>
+            </ul>
+
+            <input name="zhuce" class="input_zhuce" type="button" value="注册" onclick="submitPost()" >
+        </form>
+    </div>
+</div>
+<footer class="footer"><h4>Copyright © 软件工程实践综合教学平台</h4></footer>
+</body>
+</html>

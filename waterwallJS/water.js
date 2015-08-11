@@ -1,52 +1,28 @@
  window.onload=function(){
         waterfall("greatWall","box");
         var dataInt={"data":[
-            {"src":"img/1.jpg"},
-            {"src":"img/2.jpg"},
-            {"src":"img/3.jpg"},
-            {"src":"img/4.jpg"},
-            {"src":"img/5.jpg"},
-            {"src":"img/6.jpg"},
-            {"src":"img/7.jpg"},
-            {"src":"img/0.jpg"}
-        ]
-    }
-       function loadImage(url,callback) {
-    	var img = new Image();
-    
-    	img.src = url;
- 
-    	if(img.complete) {  // 如果图片已经存在于浏览器缓存，直接调用回调函数
-        
-        callback.call(img);
-        return; // 直接返回，不用再处理onload事件
-    	}
- 
-    	img.onload = function(){
-        img.onload = null;
-        callback.call(img);
-    	}
-	}
-
-
+            {"src":"1.jpg"},
+            {"src":"2.jpg"},
+            {"src":"3.jpg"},
+            {"src":"4.jpg"},
+            {"src":"5.jpg"},
+            {"src":"6.jpg"},
+            {"src":"7.jpg"},
+            {"src":"0.jpg"}
+        ]}
         window.onscroll=function(){
          if(checkScrollSlide()){
              var oParent=document.getElementById("greatWall");
             for(var i=0;i<dataInt.data.length;i++){
-            	loadImage(dataInt.data[i].src,callback)
-            	function callback(img){
-            	var oBox=document.createElement("div");
+                var oBox=document.createElement("div");
                 oBox.className="box";
                 oParent.appendChild(oBox);
                 var oPic=document.createElement("div");
                 oPic.className="pic";
                 oBox.appendChild(oPic);
-                //创建Image对象，保证所有图片都能被浏览器缓存
-                //var oImg=new  Image();
-                //oImg.src=dataInt.data[i].src;
-                oPic.appendChild(img);
-            	}
-               
+                var oImag=document.createElement("img");
+                oImag.src="img/"+dataInt.data[i].src;
+                oPic.appendChild(oImag);
             }
             waterfall("greatWall","box");
          }
